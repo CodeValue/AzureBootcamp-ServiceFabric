@@ -1,2 +1,8 @@
-# AzureBootcamp-ServiceFabric
-Azure Service Fabric Bootcamp. Global Azure Bootcamp is the largest community event about Azure and takes place in cities around the world. More info: https://global.azurebootcamp.net/
+# Community Content - Azure Service Fabric
+
+This folder contains content introducing Azure Service Fabric. The content is divided into two sessions:
+
+- Session 1 - Slides
+- Session 2 - Developing Microservices with Azure Service Fabric (HOL)
+
+The HOL may be presented as a hands-on lab or as a demo accompanying the slide deck.

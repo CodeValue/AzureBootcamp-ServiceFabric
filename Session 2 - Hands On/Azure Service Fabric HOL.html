@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<p><a name="HOLTitle"></a></p>
+<h1>Developing Microservices with Azure Service Fabric</h1>
+<hr>
+<p><a name="Overview"></a></p>
+<h2>Overview</h2>
+<p>One of the recent trends in enterprise architecture is the <a href="https://www.martinfowler.com/articles/microservices.html">microservices architecture pattern</a>. At its core, this pattern is a specialization of the <a href="https://en.wikipedia.org/wiki/Service-oriented_architecture">Service Oriented Architecture</a> pattern that gained popularity in the early 2000s, but extends that approach to building small and independently deployable applications and services that communicate using lightweight protocols (including HTTP and TCP). This arrangement presents several advantages:</p>
+<ul>
+<li>Services are easy to replace and maintain</li>
+<li>Services can be scaled independently</li>
+<li>Different programming tools and techniques can be employed in different services</li>
+</ul>
+<p><a href="https://azure.microsoft.com/en-us/services/service-fabric/">Azure Service Fabric</a> is a platform that supports developing and coordinating multiple services running on a cluster of virtual machines. While Service Fabric can be used to implement a variety of architectural patterns, it is ideally suited to developing and orchestrating microservice-based solutions.</p>
+<p>Azure Service Fabric deployments can exist on-premises, in the cloud in Microsoft Azure, and even in other vendors' clouds. In Azure, however, Service Fabric offers a first-class platform whose benefits are not easily duplicated in other environments. As such, Service Fabric offers a robust platform for managing solutions as well as APIs for writing them.</p>
+<p>It is important to note that while Service Fabric is one of the newer platform offerings within Microsoft Azure, it has been used internally by Microsoft for several years to power cloud services that include Azure SQL Database, DocumentDB, Cortana, Microsoft Power BI, Microsoft Intune, Azure Event hHbs, Azure IoT Hub, and Skype for Business, among others. Additional information about Azure Service Fabric and its history can be found <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview">here</a>.</p>
+<p>In this lab, you will use Visual Studio 2017 to create an Azure Service Fabric application consisting of two services. The first service will be a stateless service — in reality, an ASP.NET Core Web app — that provides a user interface (UI) for managing the inventory of a hypothetical catalog company. The second service will be a stateful service that stores inventory items and provides RESTFul access to them. By deploying both of these services and connecting them together, you will see first-hand what Azure Service Fabric is all about and how it facilitates scalability and resilience for the services it manages.</p>
+<p><a name="Objectives"></a></p>
+<h3>Objectives</h3>
+<p>In this hands-on lab, you will learn how to:</p>
+<ul>
+<li>Create a Service Fabric application using Visual Studio 2017</li>
+<li>Deploy a Service Fabric application from Visual Studio and test it on a local cluster</li>
+<li>Use Service Fabric Explorer to monitor a running Service Fabric application</li>
+<li>Write code that allows one service to communicate with another</li>
+<li>Use partitioning and Reliable Services to makes  Service Fabric applications scalable and fault-tolerant</li>
+</ul>
+<p><a name="Prerequisites"></a></p>
+<h3>Prerequisites</h3>
+<p>The following are required to complete this hands-on lab:</p>
+<ul>
+<li>Windows 7 (SP1), Windows 8.1, Windows 10, Windows Server 2012 R2, or Windows Server 2016</li>
+<li><a href="https://www.visualstudio.com/vs/">Visual Studio 2017</a> Community higher with the <strong>Azure development</strong> workload installed</li>
+<li>The <a href="https://azure.microsoft.com/en-us/services/service-fabric/">Microsoft Azure Service Fabric Core SDK</a></li>
+<li>An active Microsoft Azure subscription. If you don't have one, <a href="http://aka.ms/WATK-FreeTrial">sign up for a free trial</a>.</li>
+<li>PowerShell 3.0 or higher with the execution policy set to "Unrestricted" for the administrative user</li>
+</ul>
+<p>You can configure PowerShell correctly by running it as administrator and executing the following command:</p>
+<p><code>Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force -Scope CurrentUser</code></p>
+<p>Additional information about configuring your development environment for Azure Service Fabric can be found <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-get-started">here</a>.</p>
+<p><a name="Exercises"></a></p>
+<h2>Exercises</h2>
+<p>This hands-on lab includes the following exercises:</p>
+<ul>
+<li><a href="#Exercise1">Exercise 1: Create a Service Fabric solution</a></li>
+<li><a href="#Exercise2">Exercise 2: Run the app in a local cluster</a></li>
+<li><a href="#Exercise3">Exercise 3: Add another service to the cluster</a></li>
+<li><a href="#Exercise4">Exercise 4: Connect the services in the cluster</a></li>
+<li><a href="#Exercise5">Exercise 5: Enable partitioning and demonstrate node failover</a></li>
+</ul>
+<p>Estimated time to complete this lab: <strong>60</strong> minutes.</p>
+<p><a name="Exercise1"></a></p>
+<h2>Exercise 1: Create a Service Fabric solution</h2>
+<p>In this exercise, you will create an Azure Service Fabric application using Visual Studio 2017. Before you begin, make sure your development environment is configured with the tools and options specified in the <a href="#Prerequisites">Prerequisites</a>.</p>
+<ol>
+<li>
+<p>Start Visual Studio 2017 as an administrator. This elevation of privilege is required in order for Visual Studio to work with the <em>Service Fabric Local Cluster Manager</em>, which lets you deploy, run, and debug Service Fabric applications on your development machine.</p>
+<blockquote>
+<p>To start Visual Studio as an administrator in Windows 10, type "Visual Studio 2017" into the Windows search bar. Then right-click <strong>Visual Studio 2017</strong> and select <strong>Run as administrator</strong>. When prompted to confirm that you want to run Visual Studio as administrator, answer <strong>Yes</strong>.</p>
+</blockquote>
+</li>
+<li>
+<p>In Visual Studio, select <strong>New</strong> from the <strong>File</strong> menu, and then click <strong>Project</strong>.</p>
+<p><a href="Images/start-file_newproject.png" target="_blank"><img src="Images/start-file_newproject.png" alt="Creating a new project" style="max-width:100%;"></a></p>
+<p><em>Creating a new project</em></p>
+</li>
+<li>
+<p>Select <strong>Service Fabric Application</strong> as the project type and enter "ServiceFabricLab" as the project name. Then click <strong>OK</strong>.</p>
+<p><a href="Images/start-newproject_settings.png" target="_blank"><img src="Images/start-newproject_settings.png" alt="Specifying the project type" style="max-width:100%;"></a></p>
+<p><em>Specifying the project type</em></p>
+</li>
+<li>
+<p>Select <strong>ASP.NET Core</strong> and set the name to "InventoryService." Then click <strong>OK</strong>.</p>
+<p><a href="Images/start-newservicefabricservice_settings.png" target="_blank"><img src="Images/start-newservicefabricservice_settings.png" alt="Selecting a service template" style="max-width:100%;"></a></p>
+<p><em>Selecting a service template</em></p>
+</li>
+<li>
+<p>Make sure <strong>ASP.NET Core 1.1</strong> is selected as the framework version. Then select <strong>Web Application</strong> and click <strong>OK</strong>.</p>
+<p><a href="Images/start-newaspnetcoreapp_template.png" target="_blank"><img src="Images/start-newaspnetcoreapp_template.png" alt="Creating an ASP.NET Core Web app" style="max-width:100%;"></a></p>
+<p><em>Creating an ASP.NET Core Web app</em></p>
+</li>
+<li>
+<p>Go to Solution Explorer and confirm that the solution is structured like the one below. The solution should contain two projects named <strong>InventoryService</strong> and <strong>ServiceFabricLab</strong>. Service Fabric solutions consist of one or more Service Fabric service projects, as well as a Service Fabric application project.</p>
+<p><a href="Images/start-solutionexplorer.png" target="_blank"><img src="Images/start-solutionexplorer.png" alt="Viewing the solution in Solution Explorer" style="max-width:100%;"></a></p>
+<p><em>Viewing the solution in Solution Explorer</em></p>
+<p><strong>ServiceFabricLab</strong> is the Service Fabric application project. This project does not contain any code, but instead contains links to the services that are included in your Service Fabric application and information describing how the application will be packaged and deployed. One of the more important elements of this project is the <em>application manifest</em>. This file is named <strong>ApplicationManifest.xml</strong> and is located in the "ApplicationPackageRoot" folder. The application manifest is an XML file that describes your configuration to Service Fabric.</p>
+<p><strong>InventoryService</strong> is a stateless Service Fabric service project. If you examine the project properties, you will see that it is actually a .NET Core Console Application. This is a self-hosted Web application (one that does not rely on an external HTTP Server), which hosts the <em>WebListener</em> server within the processes managed by the Service Fabric runtime. Additional information about <em>WebListener</em> can be found <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/weblistener">here</a>.</p>
+</li>
+<li>
+<p>Open <strong>Program.cs</strong> in the <strong>InventoryService</strong> project. This file contains the following code, which registers the inventory service with the Service Fabric runtime. The <code>InventoryService</code> class is an instance of the <code>StatelessService</code> class defined in the Service Fabric SDK:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-en">ServiceRuntime.RegisterServiceAsync</span>("InventoryServiceType",
+    context =&gt; <span class="pl-k">new</span> <span class="pl-en">InventoryService</span>(<span class="pl-en">context</span>)).GetAwaiter().GetResult(); </pre></div>
+</li>
+<li>
+<p>Now open <strong>InventoryService.cs</strong> and locate the <code>CreateServiceInstanceListeners</code> method override. This method is called by the Service Fabric runtime to configure the endpoints on which this service will listen for messages. In this case, it configures an instance of the <code>WebListenerCommunicationListener</code> class, which is used to connect Service Fabric to a <em>WebListener</em> HTTP service:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">WebHostBuilder</span>().<span class="pl-en">UseWebListener</span>()
+        .<span class="pl-en">ConfigureServices</span>(
+            services =&gt; services
+                .AddSingleton&lt;StatelessServiceContext&gt;(serviceContext))
+        .<span class="pl-en">UseContentRoot</span>(Directory.GetCurrentDirectory())
+        .<span class="pl-en">UseStartup</span>&lt;<span class="pl-en">Startup</span>&gt;()
+        .<span class="pl-en">UseApplicationInsights</span>()
+        .<span class="pl-en">UseUrls</span>(url)
+        .<span class="pl-en">Build</span>();</pre></div>
+</li>
+</ol>
+<p>At this point, the application is basically a standard ASP.NET Core 1.1 MVC Web application. ASP.NET Core is a rich framework for building Web applications. Additional information about ASP.NET Core can be found <a href="https://www.asp.net/core">here</a>.</p>
+<p><a name="Exercise2"></a></p>
+<h2>Exercise 2: Run the app in a local cluster</h2>
+<p>Now that you have created a basic Service Fabric project in Visual Studio 2017, it's time to see the application in action. In this exercise, you will deploy the application to a local cluster managed by the Service Fabric Local Cluster Manager and examine it in Visual Studio and in the <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-visualizing-your-cluster">Service Fabric Explorer</a>.</p>
+<ol>
+<li>
+<p>Click the <strong>Start</strong> button in Visual Studio 2017. This will deploy the Service Fabric application to a local Service Fabric cluster. This may take a couple of minutes the first time you do it.</p>
+<blockquote>
+<p>If the deployment fails, make sure Visual Studio 2017 is running as an administrator AND that PowerShell 3.0 or higher is installed with the execution policy set to "Unrestricted" for the administrative user.</p>
+</blockquote>
+<p><a href="Images/debug-startservice_indebugger.png" target="_blank"><img src="Images/debug-startservice_indebugger.png" alt="Starting the application" style="max-width:100%;"></a></p>
+<p><em>Starting the application</em></p>
+</li>
+<li>
+<p>Confirm that a browser opens and shows the inventory service.</p>
+<p><a href="Images/debug-apprunning_inbrowser.png" target="_blank"><img src="Images/debug-apprunning_inbrowser.png" alt="Browser showing the inventory service" style="max-width:100%;"></a></p>
+<p><em>Browser showing the inventory service</em></p>
+</li>
+<li>
+<p>Return to the Visual Studio and confirm that a Diagnostics Event window opened when you launched the app. The default templates for Service Fabric service applications in Visual Studio 2017 include a <code>ServiceEventSource</code> class. This class registers your application and provides helper events for writing trace and diagnostic information using <a href="https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx">Event Tracing for Windows</a>.</p>
+<p><a href="Images/debug-diagnosticeventswindow.png" target="_blank"><img src="Images/debug-diagnosticeventswindow.png" alt="Viewing diagnostic events" style="max-width:100%;"></a></p>
+<p><em>Viewing diagnostic events</em></p>
+</li>
+<li>
+<p>Open <strong>HomeController.cs</strong> in the "Controllers" folder of the <strong>InventoryService</strong> project. Insert a breakpoint on the <code>return</code> statement in the <code>About</code> method by clicking in the left margin or placing the cursor on that line and pressing <strong>F9</strong>.</p>
+<p><a href="Images/debug-aboutmethod_breakpoint.png" target="_blank"><img src="Images/debug-aboutmethod_breakpoint.png" alt="Inserting a breakpoint" style="max-width:100%;"></a></p>
+<p><em>Inserting a breakpoint</em></p>
+</li>
+<li>
+<p>Return to the browser and click <strong>About</strong> at the top of the page.</p>
+<p><a href="Images/debug-clickon_about.png" target="_blank"><img src="Images/debug-clickon_about.png" alt="Navigating to the About page" style="max-width:100%;"></a></p>
+<p><em>Navigating to the About page</em></p>
+</li>
+<li>
+<p>Return to Visual Studio and confirm that the breakpoint was hit. Click the <strong>Continue</strong> button (or simply press <strong>F5</strong>) to resume execution.</p>
+</li>
+<li>
+<p>The next step is to use the Service Fabric Explorer to view the status of the application as it runs on a local cluster. Right-click the <strong>Service Fabric Local Cluster Manager</strong> icon in the Windows system tray and select <strong>Manage Local Cluster</strong> from the ensuing menu.</p>
+<p><a href="Images/debug-systemtray_managelocalcluster.png" target="_blank"><img src="Images/debug-systemtray_managelocalcluster.png" alt="Launching the Local Cluster Manager" style="max-width:100%;"></a></p>
+<p><em>Launching the Local Cluster Manager</em></p>
+</li>
+<li>
+<p>Confirm that Service Fabric Explorer appears in a browser. This dashboard view offers at-a-glance information about your cluster's health, including the status of applications deployed to the cluster and the status of the cluster's nodes. Links at the top of the dashboard provide access to additional information, including a cluster map and detailed health metrics.</p>
+<p><a href="Images/debug-servicefabricexplorer.png" target="_blank"><img src="Images/debug-servicefabricexplorer.png" alt="Service Fabric Explorer" style="max-width:100%;"></a></p>
+<p><em>Service Fabric Explorer</em></p>
+</li>
+<li>
+<p>Expand the <strong>Applications</strong> node in the treeview on the left and drill down until you find the running partition, whose name is a GUID. Click the partition to select it.</p>
+<p><a href="Images/select-partition.png" target="_blank"><img src="Images/select-partition.png" alt="Selecting the running partition" style="max-width:100%;"></a></p>
+<p><em>Selecting the running partition</em></p>
+</li>
+<li>
+<p>Find the node name in the "Instances" section on the right.</p>
+<p><a href="Images/debug-partition_information.png" target="_blank"><img src="Images/debug-partition_information.png" alt="Finding the node name" style="max-width:100%;"></a></p>
+<p><em>Finding the node name</em></p>
+</li>
+<li>
+<p>Expand the <strong>Nodes</strong> node in the treeview on the left. Then select the node you identified in the previous step. Spend some time exploring the information that is available.</p>
+<p><a href="Images/debug-nodeinformation.png" target="_blank"><img src="Images/debug-nodeinformation.png" alt="Viewing node information" style="max-width:100%;"></a></p>
+<p><em>Viewing node information</em></p>
+</li>
+<li>
+<p>Close your Web browser. Then return to Visual Studio and use the <strong>Debug</strong> -&gt; <strong>Stop Debugging</strong> command to stop debugging.</p>
+</li>
+</ol>
+<p>When you stop debugging, Visual Studio will stop the application and remove it from the local cluster. It will be deployed again the next time you launch it from Visual Studio.</p>
+<p><a name="Exercise3"></a></p>
+<h2>Exercise 3: Add another service to the cluster</h2>
+<p>In this exercise, you will add a new service to the Service Fabric application. This service will act as a repository for a hypothetical product-inventory system, and it will use Service Fabric <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-services-reliable-collections">Stateful Service Reliable Collections</a> to maintain inventory data and make it available through RESTful Web API endpoints.</p>
+<ol>
+<li>
+<p>Right-click the <strong>ServiceFabricLab</strong> solution in Solution Explorer and use the <strong>Add</strong> -&gt; <strong>New Project</strong> command to add a project to the solution. Select <strong>Class Library (.NET Framework)</strong> as the project type and name it "InventoryCommon." Then click <strong>OK</strong>.</p>
+<p><a href="Images/addservice-newclasslibrary_settings.png" target="_blank"><img src="Images/addservice-newclasslibrary_settings.png" alt="Adding a project to the solution" style="max-width:100%;"></a></p>
+<p><em>Adding a project to the solution</em></p>
+</li>
+<li>
+<p>Delete the file named <strong>Class1.cs</strong> file from the <strong>InventoryCommon</strong> project. Then right-click the project in Solution Explorer and select <strong>Add</strong> -&gt; <strong>Existing Item...</strong>.</p>
+<p><a href="Images/addservice-add_existingitem_common.png" target="_blank"><img src="Images/addservice-add_existingitem_common.png" alt="Adding items to the project" style="max-width:100%;"></a></p>
+<p><em>Adding items to the project</em></p>
+</li>
+<li>
+<p>In the "Add Existing Item" dialog, browse to the "Resources" folder included with this lab. Select the file named <strong>InventoryItem.cs</strong> and click <strong>Add</strong>.</p>
+<p><a href="Images/addservice-add_inventoryitemfile.png" target="_blank"><img src="Images/addservice-add_inventoryitemfile.png" alt="Importing InventoryItem.cs" style="max-width:100%;"></a></p>
+<p><em>Importing InventoryItem.cs</em></p>
+<p>This file contains an <code>InventoryItem</code> type that will be used to pass inventory items between services in the application. It also contains an <code>enum</code> named <code>InventoryItemType</code> that specifies the item type — Appliances, Flooring, etc. Later, this <code>enum</code> will be used as a key to divide the deployment into separate service partiions.</p>
+</li>
+<li>
+<p>Right-click <strong>Services</strong> in the <strong>ServiceFabricLab</strong> project, and select <strong>Add</strong> -&gt; <strong>New Service Fabric Service...</strong>..</p>
+<p><a href="Images/addservice-infoke_addnewservice.png" target="_blank"><img src="Images/addservice-infoke_addnewservice.png" alt="Adding a service" style="max-width:100%;"></a></p>
+<p><em>Adding a service</em></p>
+</li>
+<li>
+<p>Select <strong>Stateful Service</strong> and enter "InventoryRepository" as the service name. Then click <strong>OK</strong>. This will add a new project named <strong>InventoryRepository</strong> to the solution.</p>
+<p><a href="Images/addservice-newservicefabricservice_settings.png" target="_blank"><img src="Images/addservice-newservicefabricservice_settings.png" alt="Adding a stateful service" style="max-width:100%;"></a></p>
+<p><em>Adding a stateful service</em></p>
+</li>
+<li>
+<p>Right-click the <strong>InventoryRepository</strong> project and select <strong>Manage NuGet Packages...</strong> from the context menu. Make sure <strong>Browse</strong> is selected in the Nuget Package Manager, and then type "Microsoft.AspNet.WebApi.OwinSelfHost" into the search box. Select <strong>Microsoft.AspNet.WebApi.OwinSelfHost</strong> from the search results and click the Install button. OK any changes shown to you and accept any licenses that are presented.</p>
+<p><a href="Images/addservice-add_ownselfhostnugetpackage.png" target="_blank"><img src="Images/addservice-add_ownselfhostnugetpackage.png" alt="Adding the OWIN Self-Host Nuget Package" style="max-width:100%;"></a></p>
+<p><em>Adding the OWIN Self-Host Nuget Package</em></p>
+</li>
+<li>
+<p>Right-click the <strong>InventoryRepository</strong> project in Solution Explorer and use the <strong>Add</strong> -&gt; <strong>Existing Item</strong> command to import <strong>OwinCommunicationListener.cs</strong> from this lab's "Resources" folder.</p>
+<p><a href="Images/addservice-add_owincommunicationlistenerfile.png" target="_blank"><img src="Images/addservice-add_owincommunicationlistenerfile.png" alt="Importing OwinCommunicationListener.cs" style="max-width:100%;"></a></p>
+<p><em>Importing OwinCommunicationListener.cs</em></p>
+</li>
+<li>
+<p>Open <strong>InventoryRepository.cs</strong> and add the following <code>using</code> statements at the top of the file:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">using</span> <span class="pl-en">System.Fabric.Description</span>;
+<span class="pl-k">using</span> <span class="pl-en">InventoryRepository.ServiceFabric</span>;</pre></div>
+</li>
+<li>
+<p>Delete the <code>RunAsync</code> method and replace the contents of the <code>CreateServiceReplicaListeners</code> method with the following code:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">var</span> <span class="pl-en">endpoints </span>= <span class="pl-en">Context.CodePackageActivationContext.GetEndpoints</span>()
+           .<span class="pl-en">Where</span>(endpoint =&gt; endpoint.Protocol == EndpointProtocol.Http || endpoint.Protocol == EndpointProtocol.Https)
+           .<span class="pl-en">Select</span>(endpoint =&gt; endpoint.Name);
+
+<span class="pl-k">return</span> <span class="pl-en">endpoints.Select</span>(
+    endpoint =&gt; <span class="pl-k">new</span> <span class="pl-en">ServiceReplicaListener</span>(
+        serviceContext =&gt; <span class="pl-k">new</span> <span class="pl-en">OwinCommunicationListener</span>(
+            appBuilder =&gt; { WebHostStartup.ConfigureApp(appBuilder, StateManager); }, 
+            serviceContext, 
+            ServiceEventSource.Current, 
+            endpoint), 
+        endpoint));</pre></div>
+<p>This code retrieves the HTTP/HTTPS endpoints for the current service and returns a new <code>ServiceReplicaListener</code> instance for each. Each <code>ServiceReplicaListener</code> is configured to load an <code>OwinCommunicationListener</code> and initialize the OWIN pipeline with an instance of <code>WebHostStartup</code>.</p>
+</li>
+<li>
+<p>Now open <strong>ServiceManifest.xml</strong> in the project's "PackageRoot" folder. Locate the <code>&lt;Endpoint Name="ServiceEndpoint" /&gt;</code> element and replace it with the following statement to configure the application to expose an HTTP endpoint on port 8081:</p>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">Endpoint</span> <span class="pl-e">Name</span>=<span class="pl-s"><span class="pl-pds">"</span>ServiceEndpoint<span class="pl-pds">"</span></span> <span class="pl-e">Type</span>=<span class="pl-s"><span class="pl-pds">"</span>Input<span class="pl-pds">"</span></span> <span class="pl-e">Protocol</span>=<span class="pl-s"><span class="pl-pds">"</span>http<span class="pl-pds">"</span></span> <span class="pl-e">Port</span>=<span class="pl-s"><span class="pl-pds">"</span>8081<span class="pl-pds">"</span></span>/&gt;</pre></div>
+</li>
+<li>
+<p>In Solution Explorer, right-click <strong>References</strong> in the <strong>InventoryRepository</strong> project and select <strong>Add References...</strong>. In the "Reference Manager" dialog, check the box next to <strong>InventoryCommon</strong> in the list of projects. Then click <strong>OK</strong>.</p>
+<p><a href="Images/addservice-addreference_tocommonlibrary.png" target="_blank"><img src="Images/addservice-addreference_tocommonlibrary.png" alt="Adding a reference to the InventoryCommon project" style="max-width:100%;"></a></p>
+<p><em>Adding a reference to the InventoryCommon project</em></p>
+</li>
+<li>
+<p>Right-click the <strong>InventoryRepository</strong> project again use the <strong>Add</strong> -&gt; <strong>New Folder</strong> command to add folder named "Controllers."</p>
+</li>
+<li>
+<p>Right-click the "Controllers" folder. Use the <strong>Add</strong> -&gt; <strong>Class...</strong> command to add a class file named <strong>InventoryController.cs</strong>. Then replace the contents of the file with the following code:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">using</span> <span class="pl-en">System</span>;
+<span class="pl-k">using</span> <span class="pl-en">System.Collections.Generic</span>;
+<span class="pl-k">using</span> <span class="pl-en">System.Threading</span>;
+<span class="pl-k">using</span> <span class="pl-en">System.Threading.Tasks</span>;
+<span class="pl-k">using</span> <span class="pl-en">System.Web.Http</span>;
+<span class="pl-k">using</span> <span class="pl-en">Microsoft.ServiceFabric.Data</span>;
+<span class="pl-k">using</span> <span class="pl-en">Microsoft.ServiceFabric.Data.Collections</span>;
+<span class="pl-k">using</span> <span class="pl-en">InventoryCommon</span>;
+<span class="pl-k">using</span> <span class="pl-en">InventoryRepository.ServiceFabric</span>;
+
+<span class="pl-k">namespace</span> <span class="pl-en">InventoryRepository.Controllers</span>
+{
+    [RoutePrefix(<span class="pl-s"><span class="pl-pds">"</span>api/inventory<span class="pl-pds">"</span></span>)]
+    <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">InventoryController</span> : <span class="pl-en">ApiController</span>
+    {
+        <span class="pl-k">private readonly </span><span class="pl-en">IReliableStateManager</span> <span class="pl-en">_stateManager</span>;
+
+        <span class="pl-k">public</span> <span class="pl-en">InventoryController</span>()
+        {
+            _stateManager = WebHostStartup.StateManager;
+        }
+    }
+}</pre></div>
+</li>
+<li>
+<p>Add the following methods to the <code>InventoryController</code> class:</p>
+<div class="highlight highlight-source-cs"><pre>[HttpGet]
+[Route(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>)]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">IEnumerable</span>&lt;<span class="pl-en">InventoryItem</span>&gt;&gt; <span class="pl-en">GetItems</span>()
+{
+    <span class="pl-k">using</span> (<span class="pl-k">var</span> <span class="pl-en">tx </span>= _stateManager.CreateTransaction())
+    {
+        <span class="pl-k">var</span> <span class="pl-en">inventoryDictionary </span>= <span class="pl-k">await</span> _stateManager.GetOrAddAsync&lt;IReliableDictionary&lt;Guid, InventoryItem&gt;&gt;(<span class="pl-s"><span class="pl-pds">"</span>inventoryDictionary<span class="pl-pds">"</span></span>);
+        <span class="pl-k">var</span> <span class="pl-en">items </span>= <span class="pl-k">await</span> inventoryDictionary.CreateEnumerableAsync(tx);
+
+        <span class="pl-k">var</span> <span class="pl-en">result </span>= <span class="pl-k">new</span> <span class="pl-en">List</span>&lt;InventoryItem&gt;();
+        <span class="pl-k">using</span> (<span class="pl-k">var</span> <span class="pl-en">enumerator </span>= items.GetAsyncEnumerator())
+        {
+            <span class="pl-k">while</span> (<span class="pl-k">await</span> enumerator.MoveNextAsync(CancellationToken.None))
+            {
+                result.Add(enumerator.Current.Value);
+            }
+            <span class="pl-k">return</span> result;
+        }
+    }
+}
+
+[HttpGet]
+[Route(<span class="pl-s"><span class="pl-pds">"</span>{itemId}<span class="pl-pds">"</span></span>)]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">InventoryItem</span>&gt; <span class="pl-en">GetItem</span>(<span class="pl-en">Guid</span> <span class="pl-smi">itemId</span>)
+{
+    <span class="pl-k">using</span> (<span class="pl-k">var</span> <span class="pl-en">tx </span>= _stateManager.CreateTransaction())
+    {
+        <span class="pl-k">var</span> <span class="pl-en">inventoryDictionary </span>= <span class="pl-k">await</span> _stateManager.GetOrAddAsync&lt;IReliableDictionary&lt;Guid, InventoryItem&gt;&gt;(<span class="pl-s"><span class="pl-pds">"</span>inventoryDictionary<span class="pl-pds">"</span></span>);
+        <span class="pl-k">var</span> <span class="pl-en">item </span>= <span class="pl-k">await</span> inventoryDictionary.TryGetValueAsync(tx, itemId);
+        <span class="pl-k">return</span> item.HasValue ? item.Value : <span class="pl-c1">null</span>;
+    }
+}</pre></div>
+<p>Each of these methods uses the Service Fabric Stateful Services' <code>StateManager</code> class to create a transaction scope, create or retrieve a <code>ReliableDictionary</code> object, and retrieve an item from that object. <code>ReliableDictionary</code> is part of the <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-services-reliable-collections">Reliable Collection</a> types offered by Service Fabric. Reliable collections support high availability, scalability, and speed while offering a programming model that is similar to one for applications that run on a single computer rather than a cluster.</p>
+</li>
+<li>
+<p>Now add the following methods to the <code>InventoryController</code> class:</p>
+<div class="highlight highlight-source-cs"><pre>[HttpPost]
+[Route(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>)]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">InventoryItem</span>&gt; <span class="pl-en">AddNewItem</span>(<span class="pl-en">InventoryItem</span> <span class="pl-smi">item</span>)
+{
+    <span class="pl-k">using</span> (<span class="pl-k">var</span> <span class="pl-en">tx </span>= _stateManager.CreateTransaction())
+    {
+        <span class="pl-k">var</span> <span class="pl-en">inventoryDictionary </span>= <span class="pl-k">await</span> _stateManager.GetOrAddAsync&lt;IReliableDictionary&lt;Guid, InventoryItem&gt;&gt;(<span class="pl-s"><span class="pl-pds">"</span>inventoryDictionary<span class="pl-pds">"</span></span>);
+        <span class="pl-k">if</span> (item.ItemId == Guid.Empty) item.ItemId = Guid.NewGuid();
+        <span class="pl-k">await</span> inventoryDictionary.AddAsync(tx, item.ItemId, item);
+        <span class="pl-k">await</span> tx.CommitAsync();
+    }
+    <span class="pl-k">return</span> item;
+}
+
+[HttpPost]
+[Route(<span class="pl-s"><span class="pl-pds">"</span>{itemId}/addinventory/{quantity}<span class="pl-pds">"</span></span>)]
+<span class="pl-k">public</span> <span class="pl-en">Task</span> <span class="pl-en">AddInventory</span>(<span class="pl-en">Guid</span> <span class="pl-smi">itemId</span>, <span class="pl-en">Int32</span> <span class="pl-smi">quantity</span>)
+{
+    <span class="pl-k">if</span> (quantity &lt; <span class="pl-c1">0</span>) <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">ArgumentException</span>(<span class="pl-s"><span class="pl-pds">"</span>Quantity must be a positive number<span class="pl-pds">"</span></span>, <span class="pl-k">nameof</span>(<span class="pl-en">quantity</span>));
+    <span class="pl-k">return</span> UpdateInventoryAsync(itemId, quantity);
+}
+
+[HttpPost]
+[Route(<span class="pl-s"><span class="pl-pds">"</span>{itemId}/removeinventory/{quantity}<span class="pl-pds">"</span></span>)]
+<span class="pl-k">public</span> <span class="pl-en">Task</span> <span class="pl-en">RemoveInventory</span>(<span class="pl-en">Guid</span> <span class="pl-smi">itemId</span>, <span class="pl-en">Int32</span> <span class="pl-smi">quantity</span>)
+{
+    <span class="pl-k">if</span> (quantity &lt; <span class="pl-c1">0</span>) <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">ArgumentException</span>(<span class="pl-s"><span class="pl-pds">"</span>Quantity must be a positive number<span class="pl-pds">"</span></span>, <span class="pl-k">nameof</span>(<span class="pl-en">quantity</span>));
+    <span class="pl-k">return</span> UpdateInventoryAsync(itemId, -<span class="pl-c1">1</span> * quantity);
+}
+
+<span class="pl-k">private</span> <span class="pl-k">async</span> <span class="pl-en">Task</span> <span class="pl-en">UpdateInventoryAsync</span>(<span class="pl-en">Guid</span> <span class="pl-smi">itemId</span>, <span class="pl-en">Int32</span> <span class="pl-smi">quantity</span>)
+{
+    <span class="pl-k">using</span> (<span class="pl-en">ITransaction</span> <span class="pl-en">tx</span> = _stateManager.CreateTransaction())
+    {
+        <span class="pl-c">// Use the user’s name to look up their data</span>
+        <span class="pl-k">var</span> <span class="pl-en">inventoryDictionary </span>= <span class="pl-k">await</span> _stateManager.GetOrAddAsync&lt;IReliableDictionary&lt;Guid, InventoryItem&gt;&gt;(<span class="pl-s"><span class="pl-pds">"</span>inventoryDictionary<span class="pl-pds">"</span></span>);
+
+        <span class="pl-k">var</span> <span class="pl-en">originalItem </span>= <span class="pl-k">await</span> inventoryDictionary.TryGetValueAsync(tx, itemId);
+        <span class="pl-k">if</span> (originalItem.HasValue)
+        {
+            <span class="pl-k">var</span> <span class="pl-en">updatedItem </span>= InventoryItem.CreateCopy(originalItem.Value);
+            updatedItem.InventoryCount = updatedItem.InventoryCount + quantity;
+            <span class="pl-k">await</span> inventoryDictionary.TryUpdateAsync(tx, itemId, updatedItem, originalItem.Value);
+
+            <span class="pl-k">await</span> tx.CommitAsync();
+        }
+    }
+}</pre></div>
+<p>The <code>UpdateInventoryAsync</code> method does something that is subtle but important. Items stored in Reliable Collections are immutable. In order to update an <code>InventoryItem</code> with a new quantity, <code>UpdateInventoryAsync</code> copies the original <code>InventoryItem</code>, updates the quantity, and then replaces the original item in the dictionary with the new one by calling <code>TryUpdateAsync</code>.</p>
+</li>
+<li>
+<p>Launch the application again from Visual Studio. Open the Service Fabric Explorer and confirm that there are now <em>two</em> services running in the cluster.</p>
+<p><a href="Images/addservice-check_bothservicesrunning.png" target="_blank"><img src="Images/addservice-check_bothservicesrunning.png" alt="Services running in the cluster" style="max-width:100%;"></a></p>
+<p><em>Services running in the cluster</em></p>
+</li>
+</ol>
+<p>Once you have confirmed that both services are shown in Service Fabric Explorer, use Visual Studio's <strong>Stop Debugging</strong> command to stop debugging and shut down the application.</p>
+<p><a name="Exercise4"></a></p>
+<h2>Exercise 4: Connect the services in the cluster</h2>
+<p>In this exercise, you will connect the two services so the inventory service (which provides the UI) can transmit requests to inventory-repository service. This will allow you to add inventory items to the catalog as well as increase and decrease the quantity of each item. At the end of this exercise, you will be able to launch the application and adjust inventories in your browser.</p>
+<ol>
+<li>
+<p>Right-click the <strong>InventoryService</strong> project in Solution Explorer. Select <strong>Add</strong> -&gt; <strong>Existing Item</strong> and select <strong>HttpCommunicationClient.cs</strong> in this lab's "Resources" folder. Then click <strong>Add</strong>.</p>
+<p><a href="Images/communicate-add_httpommunicationclient.png" target="_blank"><img src="Images/communicate-add_httpommunicationclient.png" alt="Importing HTTPCommunicationClient.cs" style="max-width:100%;"></a></p>
+<p><em>Importing HTTPCommunicationClient.cs</em></p>
+</li>
+<li>
+<p>Right-click <strong>Dependencies</strong> in the <strong>InventoryService</strong> project, and then click <strong>Add Reference...</strong>..</p>
+<p><a href="Images/communicate-addreference.png" target="_blank"><img src="Images/communicate-addreference.png" alt="Adding a reference to the InventoryService project" style="max-width:100%;"></a></p>
+<p><em>Adding a reference to the InventoryService project</em></p>
+</li>
+<li>
+<p>Check the box next to the <strong>InventoryCommon</strong> project and click <strong>OK</strong> to add the project reference.</p>
+</li>
+<li>
+<p>Open <strong>HomeController.cs</strong> in the <strong>InventoryService</strong> project's "Controllers" folder and add the following <code>using</code> statements at the top of the file:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">using</span> <span class="pl-en">System.Fabric</span>;
+<span class="pl-k">using</span> <span class="pl-en">System.Net.Http</span>;
+<span class="pl-k">using</span> <span class="pl-en">System.Text</span>;
+<span class="pl-k">using</span> <span class="pl-en">System.Threading</span>;
+<span class="pl-k">using</span> <span class="pl-en">Microsoft.ServiceFabric.Services.Communication.Client</span>;
+<span class="pl-k">using</span> <span class="pl-en">Microsoft.ServiceFabric.Services.Client</span>;
+<span class="pl-k">using</span> <span class="pl-en">Newtonsoft.Json</span>;
+<span class="pl-k">using</span> <span class="pl-en">InventoryCommon</span>;</pre></div>
+</li>
+<li>
+<p>Scroll to the bottom of <strong>HomeController.cs</strong> file and add the following helper classes just before the final curly-brace:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">ItemListViewModel</span>
+{
+    <span class="pl-k">public </span><span class="pl-en">IEnumerable</span>&lt;<span class="pl-en">InventoryItem</span>&gt; <span class="pl-en">InventoryItems</span> { <span class="pl-k">get</span>; <span class="pl-k">set</span>; }
+    <span class="pl-k">public </span><span class="pl-en">InventoryItemType</span>? <span class="pl-en">SelectedItemType</span> { <span class="pl-k">get</span>; <span class="pl-k">set</span>; }
+}
+
+<span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">InventoryQuantityViewModel</span>
+{
+    <span class="pl-k">public </span><span class="pl-en">Guid</span> <span class="pl-en">ItemId</span> { <span class="pl-k">get</span>; <span class="pl-k">set</span>; }
+    <span class="pl-k">public </span><span class="pl-en">InventoryItemType</span> <span class="pl-en">ItemType</span> { <span class="pl-k">get</span>; <span class="pl-k">set</span>; }
+    <span class="pl-k">public </span><span class="pl-en">String</span> <span class="pl-en">Display</span> { <span class="pl-k">get</span>; <span class="pl-k">set</span>; }
+    <span class="pl-k">public </span><span class="pl-en">Boolean</span> <span class="pl-en">IsAdd</span> { <span class="pl-k">get</span>; <span class="pl-k">set</span>; }
+    <span class="pl-k">public </span><span class="pl-en">Int32</span> <span class="pl-en">Quantity</span> { <span class="pl-k">get</span>; <span class="pl-k">set</span>; }
+}</pre></div>
+</li>
+<li>
+<p>Next, add the following field definitions at the start of the <code>HomeController</code> class:</p>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">private</span> <span class="pl-k">readonly</span> <span class="pl-en">HttpCommunicationClientFactory</span> _clientFactory 
+	= new <span class="pl-en">HttpCommunicationClientFactory</span>(<span class="pl-en">new</span> <span class="pl-smi">ServicePartitionResolver</span>(() =&gt; <span class="pl-k">new</span> <span class="pl-en">FabricClient</span>()));
+<span class="pl-k">private</span> <span class="pl-k">readonly</span> <span class="pl-en">Uri</span> <span class="pl-en">_serviceUri</span> = <span class="pl-k">new</span> <span class="pl-en">Uri</span>(<span class="pl-pds">$"</span>{FabricRuntime.GetActivationContext().ApplicationName}<span class="pl-s">/InventoryRepository</span><span class="pl-pds">"</span>);</pre></div>
+<p>These values will be used by the code in <strong>InventoryService</strong> to locate and call the endpoints exposed by the <strong>InventoryRepository</strong> service.</p>
+</li>
+<li>
+<p>Replace the existing <code>Index</code> method with the following method:</p>
+<div class="highlight highlight-source-cs"><pre>[HttpGet]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">IActionResult</span>&gt; <span class="pl-en">Index</span>(<span class="pl-en">InventoryItemType</span>? <span class="pl-smi">selectedItemType</span>)
+{
+    <span class="pl-c">// If not item type is selected, just display a blank list</span>
+    <span class="pl-k">if</span> (selectedItemType == <span class="pl-c1">null</span>)
+    {
+        <span class="pl-k">return</span> View(<span class="pl-k">new</span> <span class="pl-en">ItemListViewModel</span> { InventoryItems = <span class="pl-k">new</span> <span class="pl-en">InventoryItem</span>[] { } });
+    }
+
+    <span class="pl-c">// An item type has been selected - retrieve its contents.</span>
+    <span class="pl-k">var</span> <span class="pl-en">partitionKey </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionKey</span>(0);
+    <span class="pl-k">var</span> <span class="pl-en">partitionClient </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionClient</span>&lt;HttpCommunicationClient&gt;(_clientFactory, _serviceUri, partitionKey);
+    <span class="pl-k">var</span> <span class="pl-en">items </span>= <span class="pl-k">await</span> partitionClient.InvokeWithRetryAsync(async (client) =&gt;
+    {
+        <span class="pl-k">var</span> <span class="pl-en">response </span>= <span class="pl-k">await</span> client.HttpClient.GetAsync(<span class="pl-k">new</span> <span class="pl-en">Uri</span>(<span class="pl-pds">$"</span>{client.BaseUri}<span class="pl-s">/api/inventory</span><span class="pl-pds">"</span>));
+        <span class="pl-k">if</span> (!response.IsSuccessStatusCode)
+        {
+            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">InvalidOperationException</span>(<span class="pl-pds">$"</span><span class="pl-s">Error - </span>{response.StatusCode}<span class="pl-s">: </span>{response.ReasonPhrase}<span class="pl-pds">"</span>);
+        }
+        
+        <span class="pl-k">var</span> <span class="pl-en">responseContent </span>= <span class="pl-k">await</span> response.Content.ReadAsStringAsync();
+        <span class="pl-k">var</span> <span class="pl-en">resultItems </span>= JsonConvert.DeserializeObject&lt;IEnumerable&lt;InventoryItem&gt;&gt;(<span class="pl-en">responseContent</span>);
+
+        <span class="pl-c">// Note - filter applied client-side for demo purposes only.</span>
+        <span class="pl-k">return</span> resultItems.Where(x =&gt; x.ItemType == selectedItemType);
+                        
+    }, CancellationToken.None);
+
+    <span class="pl-k">var</span> <span class="pl-en">viewModel </span>= <span class="pl-k">new</span> <span class="pl-en">ItemListViewModel</span>
+    {
+        InventoryItems = items,
+        SelectedItemType = selectedItemType
+    };
+    <span class="pl-k">return</span> View(viewModel);
+}
+</pre></div>
+<p>The new <code>Index</code> method checks to see if an <code>InventoryItemType</code> selection has been made. If an inventory type is selected, a call goes out to <code>ServicePartitionClient.InvokeWithRetryAsync</code> to retrieve the inventory items of that type from the Inventory service. The results are then made available to the view.</p>
+<p>Note that filtering the returned list by item type on the client is not a pattern you would use in production, but is instead done for expediency. In the next exercise, you will learn how to improve on this by using Service Fabric's partitioning support.</p>
+</li>
+<li>
+<p>Now open <strong>Index.cshtml</strong> in the project's "Views\Home" folder and replace its contents with the following markup:</p>
+<div class="highlight highlight-text-html-basic"><pre>@model InventoryService.Controllers.ItemListViewModel
+
+@{
+    ViewData["Title"] = "Inventory List";
+}
+
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>row<span class="pl-pds">"</span></span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>padding-bottom: 20px; padding-top: 20px;<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>col-sm-12<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">form</span> <span class="pl-e">method</span>=<span class="pl-s"><span class="pl-pds">"</span>get<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-inline<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">label</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>SelectedItemType<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">label</span>&gt;
+                &lt;<span class="pl-ent">select</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>SelectedItemType<span class="pl-pds">"</span></span>
+                        <span class="pl-e">asp-items</span>=<span class="pl-s"><span class="pl-pds">"</span>@(new SelectList(Enum.GetNames(typeof(InventoryCommon.InventoryItemType))))<span class="pl-pds">"</span></span>
+                        <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">option</span>&gt;Choose an item type&lt;/<span class="pl-ent">option</span>&gt;
+                &lt;/<span class="pl-ent">select</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>submit<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn btn-primary<span class="pl-pds">"</span></span>&gt;Select&lt;/<span class="pl-ent">button</span>&gt;
+        &lt;/<span class="pl-ent">form</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;
+
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>row<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>col-sm-12<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>table-responsive<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">table</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>table table-condensed table-bordered table-responsive table-hover<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">thead</span>&gt;
+                    &lt;<span class="pl-ent">tr</span>&gt;
+                        &lt;<span class="pl-ent">th</span>&gt;&lt;<span class="pl-ent">span</span>&gt;Item Type&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">th</span>&gt;
+                        &lt;<span class="pl-ent">th</span>&gt;&lt;<span class="pl-ent">span</span>&gt;Name&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">th</span>&gt;
+                        &lt;<span class="pl-ent">th</span>&gt;&lt;<span class="pl-ent">span</span>&gt;Count&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">th</span>&gt;
+                        &lt;<span class="pl-ent">th</span>&gt;&lt;<span class="pl-ent">span</span>&gt;Add/Remove&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">th</span>&gt;
+                    &lt;/<span class="pl-ent">tr</span>&gt;
+                &lt;/<span class="pl-ent">thead</span>&gt;
+                &lt;<span class="pl-ent">tbody</span>&gt;
+                    @foreach (var inventoryItem in Model.InventoryItems)
+                    {
+                        &lt;<span class="pl-ent">tr</span>&gt;
+                            &lt;<span class="pl-ent">td</span>&gt;&lt;<span class="pl-ent">span</span>&gt;@inventoryItem.ItemType&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">td</span>&gt;
+                            &lt;<span class="pl-ent">td</span>&gt;&lt;<span class="pl-ent">span</span>&gt;@inventoryItem.Name&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">td</span>&gt;
+                            &lt;<span class="pl-ent">td</span>&gt;&lt;<span class="pl-ent">span</span>&gt;@inventoryItem.InventoryCount&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">td</span>&gt;
+                            &lt;<span class="pl-ent">td</span>&gt;
+                                &lt;<span class="pl-ent">a</span> <span class="pl-e">asp-action</span>=<span class="pl-s"><span class="pl-pds">"</span>AddInventory<span class="pl-pds">"</span></span> 
+                                   <span class="pl-e">asp-route-itemId</span>=<span class="pl-s"><span class="pl-pds">"</span>@inventoryItem.ItemId<span class="pl-pds">"</span></span> 
+                                   <span class="pl-e">asp-route-selectedItemType</span>=<span class="pl-s"><span class="pl-pds">"</span>@inventoryItem.ItemType<span class="pl-pds">"</span></span>&gt;
+                                    &lt;<span class="pl-ent">span</span>&gt;Increase&lt;/<span class="pl-ent">span</span>&gt;
+                                &lt;/<span class="pl-ent">a</span>&gt;
+                                <span class="pl-c1">&amp;nbsp;</span>|<span class="pl-c1">&amp;nbsp;</span>
+                                &lt;<span class="pl-ent">a</span> <span class="pl-e">asp-action</span>=<span class="pl-s"><span class="pl-pds">"</span>RemoveInventory<span class="pl-pds">"</span></span> 
+                                   <span class="pl-e">asp-route-itemId</span>=<span class="pl-s"><span class="pl-pds">"</span>@inventoryItem.ItemId<span class="pl-pds">"</span></span> 
+                                   <span class="pl-e">asp-route-selectedItemType</span>=<span class="pl-s"><span class="pl-pds">"</span>@inventoryItem.ItemType<span class="pl-pds">"</span></span>&gt;
+                                    &lt;<span class="pl-ent">span</span>&gt;Decrease&lt;/<span class="pl-ent">span</span>&gt;
+                                &lt;/<span class="pl-ent">a</span>&gt;
+                            &lt;/<span class="pl-ent">td</span>&gt;
+                        &lt;/<span class="pl-ent">tr</span>&gt;
+                    }
+                &lt;/<span class="pl-ent">tbody</span>&gt;
+            &lt;/<span class="pl-ent">table</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>row<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>col-sm-12<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">a</span> <span class="pl-e">asp-action</span>=<span class="pl-s"><span class="pl-pds">"</span>AddNewInventoryItem<span class="pl-pds">"</span></span> <span class="pl-e">asp-route-itemType</span>=<span class="pl-s"><span class="pl-pds">"</span>@Model.SelectedItemType<span class="pl-pds">"</span></span> 
+           <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn btn-primary @(Model.SelectedItemType == null ? <span class="pl-pds">"</span></span><span class="pl-e">disabled</span><span class="pl-s"><span class="pl-pds">"</span> : <span class="pl-pds">"</span><span class="pl-pds">"</span>)<span class="pl-pds">"</span></span>&gt;
+            Add New Product
+        &lt;/<span class="pl-ent">a</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+<p>This markup provides a user interface for selecting inventory types, viewing inventory items, and adding new inventory to the catalog.</p>
+</li>
+<li>
+<p>Return to <strong>HomeController.cs</strong>. After the <code>Index</code> method, add the following methods:</p>
+<div class="highlight highlight-source-cs"><pre>[HttpGet]
+<span class="pl-k">public</span> <span class="pl-en">IActionResult</span> <span class="pl-en">AddNewInventoryItem</span>(<span class="pl-en">InventoryItemType</span> <span class="pl-smi">itemType</span>)
+{
+    <span class="pl-k">var</span> <span class="pl-en">newItem </span>= <span class="pl-k">new</span> <span class="pl-en">InventoryItem</span> { ItemType = itemType };
+    <span class="pl-k">return</span> View(newItem);
+}
+
+[HttpPost]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">IActionResult</span>&gt; <span class="pl-en">AddNewInventoryItem</span>(<span class="pl-en">InventoryItem</span> <span class="pl-smi">newItem</span>)
+{
+    <span class="pl-k">var</span> <span class="pl-en">partitionKey </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionKey</span>(0);
+    <span class="pl-k">var</span> <span class="pl-en">partitionClient </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionClient</span>&lt;HttpCommunicationClient&gt;(_clientFactory, _serviceUri, partitionKey);
+    <span class="pl-k">var</span> <span class="pl-en">results </span>= <span class="pl-k">await</span> partitionClient.InvokeWithRetryAsync(async (client) =&gt;
+    {
+        <span class="pl-k">var</span> <span class="pl-en">newItemContent </span>= <span class="pl-k">new</span> <span class="pl-en">StringContent</span>(JsonConvert.SerializeObject(newItem), Encoding.UTF8, <span class="pl-s"><span class="pl-pds">"</span>application/json<span class="pl-pds">"</span></span>);
+        <span class="pl-k">var</span> <span class="pl-en">response </span>= <span class="pl-k">await</span> client.HttpClient.PostAsync(<span class="pl-k">new</span> <span class="pl-en">Uri</span>(<span class="pl-pds">$"</span>{client.BaseUri}<span class="pl-s">/api/inventory</span><span class="pl-pds">"</span>), newItemContent);
+        <span class="pl-k">if</span> (!response.IsSuccessStatusCode)
+        {
+            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">InvalidOperationException</span>(<span class="pl-pds">$"</span><span class="pl-s">Error - </span>{response.StatusCode}<span class="pl-s">: </span>{response.ReasonPhrase}<span class="pl-pds">"</span>);
+        }
+
+        <span class="pl-k">var</span> <span class="pl-en">responseContent </span>= <span class="pl-k">await</span> response.Content.ReadAsStringAsync();
+        <span class="pl-k">return</span> JsonConvert.DeserializeObject&lt;InventoryItem&gt;(<span class="pl-en">responseContent</span>);
+
+    }, CancellationToken.None);
+
+    <span class="pl-k">return</span> RedirectToAction(<span class="pl-s"><span class="pl-pds">"</span>Index<span class="pl-pds">"</span></span>, new { SelectedItemType = newItem.ItemType });
+}</pre></div>
+<p>These methods allow new inventory to be added the catalog. The first creates a blank item. The second uses <code>ServicePartitionClient</code> to call the inventory service and pass it a new inventory item. If the item is successfully added, the user is redirected to the home page and shown all items of that type.</p>
+</li>
+<li>
+<p>Right-click the "Home" folder in the project's "Views" folder and use the <strong>Add</strong> -&gt; <strong>New Item...</strong> command to add an <strong>MVC View Page</strong> named <strong>AddNewInventoryItem.cshtml</strong>.</p>
+<p><a href="Images/communicate-add_newinventoryitemview.png" target="_blank"><img src="Images/communicate-add_newinventoryitemview.png" alt="Adding a new view" style="max-width:100%;"></a></p>
+<p><em>Adding a new view</em></p>
+</li>
+<li>
+<p>Replace the contents of <strong>AddNewInventoryItem.cshtml</strong> with the following statements:</p>
+<div class="highlight highlight-text-html-basic"><pre>@model InventoryCommon.InventoryItem
+
+@{
+    ViewData["Title"] = "Create Inventory Item";
+}
+
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>row<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>col-sm-12<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">form</span> <span class="pl-e">asp-action</span>=<span class="pl-s"><span class="pl-pds">"</span>AddNewInventoryItem<span class="pl-pds">"</span></span> <span class="pl-e">method</span>=<span class="pl-s"><span class="pl-pds">"</span>post<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">label</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">label</span>&gt;
+                &lt;<span class="pl-ent">input</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span> /&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">label</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>ItemType<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">label</span>&gt;
+                &lt;<span class="pl-ent">select</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>ItemType<span class="pl-pds">"</span></span> 
+                        <span class="pl-e">asp-items</span>=<span class="pl-s"><span class="pl-pds">"</span>@(new SelectList(Enum.GetNames(typeof(InventoryCommon.InventoryItemType))))<span class="pl-pds">"</span></span> 
+                        <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span>&gt;
+                    &lt;<span class="pl-ent">option</span>&gt;Choose an item type&lt;/<span class="pl-ent">option</span>&gt;
+                &lt;/<span class="pl-ent">select</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">div</span>&gt;
+                &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>submit<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn btn-primary<span class="pl-pds">"</span></span>&gt;Add Inventory Item&lt;/<span class="pl-ent">button</span>&gt;
+                &lt;<span class="pl-ent">a</span> <span class="pl-e">asp-action</span>=<span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span> <span class="pl-e">asp-route-selectedItemType</span>=<span class="pl-s"><span class="pl-pds">"</span>@(Model.ItemType)<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn btn-default<span class="pl-pds">"</span></span>&gt;Cancel&lt;/<span class="pl-ent">a</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">form</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+</li>
+<li>
+<p>Return to <strong>HomeController.cs</strong> and add the following methods to the <code>HomeController</code> class:</p>
+<div class="highlight highlight-source-cs"><pre>[HttpGet]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">IActionResult</span>&gt; <span class="pl-en">AddInventory</span>(<span class="pl-en">Guid</span> <span class="pl-smi">itemId</span>, <span class="pl-en">InventoryItemType</span> <span class="pl-smi">selectedItemType</span>)
+{
+    <span class="pl-k">var</span> <span class="pl-en">partitionKey </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionKey</span>(0);
+    <span class="pl-k">var</span> <span class="pl-en">partitionClient </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionClient</span>&lt;HttpCommunicationClient&gt;(_clientFactory, _serviceUri, partitionKey);
+    <span class="pl-k">var</span> <span class="pl-en">item </span>= <span class="pl-k">await</span> partitionClient.InvokeWithRetryAsync(async (client) =&gt;
+    {
+        <span class="pl-k">var</span> <span class="pl-en">response </span>= <span class="pl-k">await</span> client.HttpClient.GetAsync(<span class="pl-k">new</span> <span class="pl-en">Uri</span>(<span class="pl-pds">$"</span>{client.BaseUri}<span class="pl-s">/api/inventory/</span>{itemId}<span class="pl-pds">"</span>));
+        <span class="pl-k">if</span> (!response.IsSuccessStatusCode)
+        {
+            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">InvalidOperationException</span>(<span class="pl-pds">$"</span><span class="pl-s">Error - </span>{response.StatusCode}<span class="pl-s">: </span>{response.ReasonPhrase}<span class="pl-pds">"</span>);
+        }
+
+        <span class="pl-k">var</span> <span class="pl-en">responseContent </span>= <span class="pl-k">await</span> response.Content.ReadAsStringAsync();
+        <span class="pl-k">return</span> JsonConvert.DeserializeObject&lt;InventoryItem&gt;(<span class="pl-en">responseContent</span>);
+
+    }, CancellationToken.None);
+
+    <span class="pl-k">var</span> <span class="pl-en">viewModel </span>= <span class="pl-k">new</span> <span class="pl-en">InventoryQuantityViewModel</span>
+    {
+        ItemId = item.ItemId,
+        ItemType = item.ItemType,
+        Display = <span class="pl-pds">$"</span>{item.Name}<span class="pl-s"> (</span>{item.ItemType}<span class="pl-s">)</span><span class="pl-pds">"</span>,
+        IsAdd = <span class="pl-c1">true</span>,
+        Quantity = <span class="pl-c1">1</span>
+    };
+    <span class="pl-k">return</span> View(<span class="pl-s"><span class="pl-pds">"</span>UpdateInventoryQuantity<span class="pl-pds">"</span></span>, viewModel);
+}
+
+[HttpPost]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">IActionResult</span>&gt; <span class="pl-en">AddInventory</span>(<span class="pl-en">InventoryQuantityViewModel</span> <span class="pl-smi">viewModel</span>)
+{
+    <span class="pl-k">var</span> <span class="pl-en">partitionKey </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionKey</span>(0);
+    <span class="pl-k">var</span> <span class="pl-en">partitionClient </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionClient</span>&lt;HttpCommunicationClient&gt;(_clientFactory, _serviceUri, partitionKey);
+    <span class="pl-k">await</span> partitionClient.InvokeWithRetryAsync(async (client) =&gt;
+    {
+        <span class="pl-k">var</span> <span class="pl-en">uri </span>= <span class="pl-k">new</span> <span class="pl-en">Uri</span>(<span class="pl-pds">$"</span>{client.BaseUri}<span class="pl-s">/api/inventory/</span>{viewModel.ItemId}<span class="pl-s">/addinventory/</span>{viewModel.Quantity}<span class="pl-pds">"</span>);
+        <span class="pl-k">var</span> <span class="pl-en">response </span>= <span class="pl-k">await</span> client.HttpClient.PostAsync(uri, <span class="pl-c1">null</span>);
+        <span class="pl-k">if</span> (!response.IsSuccessStatusCode)
+        {
+            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">InvalidOperationException</span>(<span class="pl-pds">$"</span><span class="pl-s">Error - </span>{response.StatusCode}<span class="pl-s">: </span>{response.ReasonPhrase}<span class="pl-pds">"</span>);
+        }
+
+        <span class="pl-k">return</span>;
+    }, CancellationToken.None);
+
+    <span class="pl-k">return</span> RedirectToAction(<span class="pl-s"><span class="pl-pds">"</span>Index<span class="pl-pds">"</span></span>, new { SelectedItemType = viewModel.ItemType });
+}
+
+[HttpGet]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">IActionResult</span>&gt; <span class="pl-en">RemoveInventory</span>(<span class="pl-en">Guid</span> <span class="pl-smi">itemId</span>, <span class="pl-en">InventoryItemType</span> <span class="pl-smi">selectedItemType</span>)
+{
+    <span class="pl-k">var</span> <span class="pl-en">partitionKey </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionKey</span>(0);
+    <span class="pl-k">var</span> <span class="pl-en">partitionClient </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionClient</span>&lt;HttpCommunicationClient&gt;(_clientFactory, _serviceUri, partitionKey);
+    <span class="pl-k">var</span> <span class="pl-en">item </span>= <span class="pl-k">await</span> partitionClient.InvokeWithRetryAsync(async (client) =&gt;
+    {
+        <span class="pl-k">var</span> <span class="pl-en">response </span>= <span class="pl-k">await</span> client.HttpClient.GetAsync(<span class="pl-k">new</span> <span class="pl-en">Uri</span>(<span class="pl-pds">$"</span>{client.BaseUri}<span class="pl-s">/api/inventory/</span>{itemId}<span class="pl-pds">"</span>));
+        <span class="pl-k">if</span> (!response.IsSuccessStatusCode)
+        {
+            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">InvalidOperationException</span>(<span class="pl-pds">$"</span><span class="pl-s">Error - </span>{response.StatusCode}<span class="pl-s">: </span>{response.ReasonPhrase}<span class="pl-pds">"</span>);
+        }
+
+        <span class="pl-k">var</span> <span class="pl-en">responseContent </span>= <span class="pl-k">await</span> response.Content.ReadAsStringAsync();
+        <span class="pl-k">return</span> JsonConvert.DeserializeObject&lt;InventoryItem&gt;(<span class="pl-en">responseContent</span>);
+
+    }, CancellationToken.None);
+
+    <span class="pl-k">var</span> <span class="pl-en">viewModel </span>= <span class="pl-k">new</span> <span class="pl-en">InventoryQuantityViewModel</span>
+    {
+        ItemId = item.ItemId,
+        ItemType = item.ItemType,
+        Display = <span class="pl-pds">$"</span>{item.Name}<span class="pl-s"> (</span>{item.ItemType}<span class="pl-s">)</span><span class="pl-pds">"</span>,
+        IsAdd = <span class="pl-c1">false</span>,
+        Quantity = <span class="pl-c1">1</span>
+    };
+    <span class="pl-k">return</span> View(<span class="pl-s"><span class="pl-pds">"</span>UpdateInventoryQuantity<span class="pl-pds">"</span></span>, viewModel);
+}
+
+[HttpPost]
+<span class="pl-k">public</span> <span class="pl-k">async</span> <span class="pl-en">Task</span>&lt;<span class="pl-en">IActionResult</span>&gt; <span class="pl-en">RemoveInventory</span>(<span class="pl-en">InventoryQuantityViewModel</span> <span class="pl-smi">viewModel</span>)
+{
+    <span class="pl-k">var</span> <span class="pl-en">partitionKey </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionKey</span>(0);
+    <span class="pl-k">var</span> <span class="pl-en">partitionClient </span>= <span class="pl-k">new</span> <span class="pl-en">ServicePartitionClient</span>&lt;HttpCommunicationClient&gt;(_clientFactory, _serviceUri, partitionKey);
+    <span class="pl-k">await</span> partitionClient.InvokeWithRetryAsync(async (client) =&gt;
+    {
+        <span class="pl-k">var</span> <span class="pl-en">uri </span>= <span class="pl-k">new</span> <span class="pl-en">Uri</span>(<span class="pl-pds">$"</span>{client.BaseUri}<span class="pl-s">/api/inventory/</span>{viewModel.ItemId}<span class="pl-s">/removeinventory/</span>{viewModel.Quantity}<span class="pl-pds">"</span>);
+        <span class="pl-k">var</span> <span class="pl-en">response </span>= <span class="pl-k">await</span> client.HttpClient.PostAsync(uri, <span class="pl-c1">null</span>);
+        <span class="pl-k">if</span> (!response.IsSuccessStatusCode)
+        {
+            <span class="pl-k">throw</span> <span class="pl-k">new</span> <span class="pl-en">InvalidOperationException</span>(<span class="pl-pds">$"</span><span class="pl-s">Error - </span>{response.StatusCode}<span class="pl-s">: </span>{response.ReasonPhrase}<span class="pl-pds">"</span>);
+        }
+
+        <span class="pl-k">return</span>;
+    }, CancellationToken.None);
+
+    <span class="pl-k">return</span> RedirectToAction(<span class="pl-s"><span class="pl-pds">"</span>Index<span class="pl-pds">"</span></span>, new { SelectedItemType = viewModel.ItemType });
+}</pre></div>
+</li>
+<li>
+<p>Repeat Step 10 to add a view named <strong>UpdateInventoryQuantity.cshtml</strong> to the "Views\Home" folder. Then replace the file's contents with the following statements:</p>
+<div class="highlight highlight-text-html-basic"><pre>@model InventoryService.Controllers.InventoryQuantityViewModel
+
+@{
+    ViewData["Title"] = Model.IsAdd ? "Add Inventory" : "Remove Inventory";
+}
+
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>row<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>col-sm-12<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">form</span> <span class="pl-e">asp-action</span>=<span class="pl-s">@(Model.IsAdd</span> ? <span class="pl-s"><span class="pl-pds">"</span>AddInventory<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>RemoveInventory<span class="pl-pds">"</span></span>) <span class="pl-e">method</span>=<span class="pl-s"><span class="pl-pds">"</span>post<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">input</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>ItemId<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>hidden<span class="pl-pds">"</span></span> /&gt;
+            &lt;<span class="pl-ent">input</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>ItemType<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>hidden<span class="pl-pds">"</span></span> /&gt;
+            &lt;<span class="pl-ent">input</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>IsAdd<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>hidden<span class="pl-pds">"</span></span>/&gt;
+
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">label</span>&gt;Item:&lt;/<span class="pl-ent">label</span>&gt;
+                &lt;<span class="pl-ent">input</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>Display<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span> <span class="pl-e">readonly</span>/&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">label</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>Quantity<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">label</span>&gt;
+                &lt;<span class="pl-ent">input</span> <span class="pl-e">asp-for</span>=<span class="pl-s"><span class="pl-pds">"</span>Quantity<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>number<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span>/&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">div</span>&gt;
+                &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>submit<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn btn-primary<span class="pl-pds">"</span></span>&gt;@(Model.IsAdd ? "Add Inventory" : "Remove Inventory")&lt;/<span class="pl-ent">button</span>&gt;
+                &lt;<span class="pl-ent">a</span> <span class="pl-e">asp-action</span>=<span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn btn-default<span class="pl-pds">"</span></span>&gt;Cancel&lt;/<span class="pl-ent">a</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">form</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+<p>This markup defines a form that you can use to either increase or decrease the inventory quantity for a given inventory item.</p>
+</li>
+<li>
+<p>Launch the application again from Visual Studio. Confirm that the page shown in the browser resembles the one below.</p>
+<p><a href="Images/communicate-run_firstapprun.png" target="_blank"><img src="Images/communicate-run_firstapprun.png" alt="UI for managing inventory" style="max-width:100%;"></a></p>
+<p><em>UI for managing inventory</em></p>
+</li>
+<li>
+<p>Select <strong>HeatingCooling</strong> from the drop-down list and click the <strong>Select</strong> button. Click the <strong>Add New Product</strong> button and use the form to add an air conditioner to the catalog.</p>
+</li>
+<li>
+<p>Now select <strong>HandTools</strong> from the drop-down list and add a hammer and a screwdriver to the catalog.</p>
+<p><a href="Images/communicate-show_handtools.png" target="_blank"><img src="Images/communicate-show_handtools.png" alt="HandTools inventory showing 0 hammers and 0 screwdrivers" style="max-width:100%;"></a></p>
+<p><em>HandTools inventory showing 0 hammers and 0 screwdrivers</em></p>
+</li>
+<li>
+<p>Click <strong>Increase</strong> in the hammer row. In the "Add Inventory" page, set <strong>Quantity</strong> to <strong>10</strong> and click the <strong>Add Inventory</strong> button. Confirm that you are redirected to the home page and that the catalog now shows 10 hammers.</p>
+</li>
+<li>
+<p>Now click <strong>Decrease</strong> in the hammer row and decrease the quantity of hammers to 1.</p>
+</li>
+<li>
+<p>Once you have confirmed that you can manage inventory in this manner, use Visual Studio's <strong>Stop Debugging</strong> command to stop debugging and shut down the application.</p>
+</li>
+</ol>
+<p>Although the application that you deployed has only two services, the same pattern can be used to create more complex applications consisting of tens or even hundreds of services. And using Service Fabric to knit these services together makes some interesting scenarios possible.</p>
+<p><a name="Exercise5"></a></p>
+<h2>Exercise 5: Enable partitioning and demonstrate node failover</h2>
+<p>Two of the motivations for using Azure Service Fabric as a platform for microservices are scalability and reliability. An important ingredient in the recipe for both is <a href="https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-concepts-partitioning">partitioning</a>. Proper partitioning spreads workloads across nodes in the cluster so no node becomes overloaded. You can't change the way a Service Fabric app is partitioned without redeploying the app, so it helpful to plan your partitioning strategy ahead of time to reduce unwanted downtime.</p>
+<p>In this exercise, you will update the partitioning scheme for the inventory-repository service to assign different item types to different partitions in the cluster. Then you will use Service Fabric Explorer to simulate a node failure and see how partition replicas help create a fault-tolerant system.</p>
+<ol>
+<li>
+<p>Open <strong>ApplicationManifest.xml</strong> in the <strong>ServiceFabricLab</strong> project. Change the <code>InventoryRepository_PartitionCount</code> value to 10 and add entries for <code>Inventory_PartitionLowKey</code> and <code>Inventory_PartitionHighKey</code> as shown below. This will create 10 partitions: one for each inventory item type.</p>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">Parameter</span> <span class="pl-e">Name</span>=<span class="pl-s"><span class="pl-pds">"</span>InventoryRepository_PartitionCount<span class="pl-pds">"</span></span> <span class="pl-e">DefaultValue</span>=<span class="pl-s"><span class="pl-pds">"</span>10<span class="pl-pds">"</span></span> /&gt;
+&lt;<span class="pl-ent">Parameter</span> <span class="pl-e">Name</span>=<span class="pl-s"><span class="pl-pds">"</span>Inventory_PartitionLowKey<span class="pl-pds">"</span></span> <span class="pl-e">DefaultValue</span>=<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span> /&gt;
+&lt;<span class="pl-ent">Parameter</span> <span class="pl-e">Name</span>=<span class="pl-s"><span class="pl-pds">"</span>Inventory_PartitionHighKey<span class="pl-pds">"</span></span> <span class="pl-e">DefaultValue</span>=<span class="pl-s"><span class="pl-pds">"</span>9<span class="pl-pds">"</span></span> /&gt;</pre></div>
+</li>
+<li>
+<p>Locate the <code>UniformInt64Partition</code> element and update its <code>LowKey</code> and <code>HighKey</code> values as follows:</p>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">UniformInt64Partition</span> <span class="pl-e">PartitionCount</span>=<span class="pl-s"><span class="pl-pds">"</span>[InventoryRepository_PartitionCount]<span class="pl-pds">"</span></span> <span class="pl-e">LowKey</span>=<span class="pl-s"><span class="pl-pds">"</span>[Inventory_PartitionLowKey]<span class="pl-pds">"</span></span> <span class="pl-e">HighKey</span>=<span class="pl-s"><span class="pl-pds">"</span>[Inventory_PartitionHighKey]<span class="pl-pds">"</span></span> /&gt;</pre></div>
+</li>
+<li>
+<p>Set <code>InventoryRepository_PartitionCount</code> to 10 in each of the XML configuration files in the "ApplicationParameters" folder — <strong>Cloud.xml</strong>, <strong>Local.1Node.xml</strong>, and <strong>Local.5Node.xml</strong>:</p>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">Parameter</span> <span class="pl-e">Name</span>=<span class="pl-s"><span class="pl-pds">"</span>InventoryRepository_PartitionCount<span class="pl-pds">"</span></span> <span class="pl-e">Value</span>=<span class="pl-s"><span class="pl-pds">"</span>10<span class="pl-pds">"</span></span> /&gt;</pre></div>
+<p>These XML files contain configuration settings that you can use to customize individual Service Fabric deployments. The values in these files override the corresponding values in <strong>ApplicationManifest.xml</strong>.</p>
+</li>
+<li>
+<p>Open <strong>HomeController.cs</strong> in the <strong>InventoryService</strong> project's "Controllers" folder. Modify each occurrence of <code>new ServicePartitionKey(0)</code> as follows:</p>
+<ul>
+<li>In the <code>Index</code> method, replace it with <code>new ServicePartitionKey((Int64)selectedItemType)</code></li>
+<li>In the <code>AddNewInventoryItem</code> method, replace it with <code>new ServicePartitionKey((Int64)newItem.ItemType)</code></li>
+<li>In the first <code>AddInventory</code> method, replace it with <code>new ServicePartitionKey((Int64)selectedItemType)</code></li>
+<li>In the second <code>AddInventory</code> method, replace it with <code>new ServicePartitionKey((Int64)viewModel.ItemType)</code></li>
+<li>In the first <code>RemoveInventory</code> method, replace it with <code>new ServicePartitionKey((Int64)selectedItemType)</code></li>
+<li>In the second <code>RemoveInventory</code> method, replace it with <code>new ServicePartitionKey((Int64)viewModel.ItemType)</code></li>
+</ul>
+<p>Your application is now ready to run using Service Fabric partitioning. Calls from the inventory service to the inventory-repository service use the currently selected inventory item type to configure a <code>ServicePartitionKey</code> value, which is used by <code>ServicePartitionClient</code> to retrieve an address for calls.</p>
+</li>
+<li>
+<p>Launch the application and add several inventory items as you did at the end of <a href="#Exercise4">Exercise 4</a>. Be sure to add at least one item in the HandTools category.</p>
+</li>
+<li>
+<p>Launch Service Fabric Explorer and select <strong>fabric:/ServiceFabricLab/InventoryRepository</strong> under <strong>Applications</strong>. Confirm that 10 nodes appear underneath — one for each partition that you created.</p>
+<p><a href="Images/partition-explorer_expandservice.png" target="_blank"><img src="Images/partition-explorer_expandservice.png" alt="Selecting the inventory-repository service" style="max-width:100%;"></a></p>
+<p><em>Selecting the inventory-repository service</em></p>
+</li>
+<li>
+<p>Click each of the partitions until you find the one whose Low Key and High Key values are 3, which is the integer value for <code>HandTools</code> in the <code>InventoryItemType</code> enumeration. Then go to the "Replicas" section at the bottom of the page and make note of the node name for the <strong>Primary</strong> replica.</p>
+<p><a href="Images/partition-explorer_locatehandtools.png" target="_blank"><img src="Images/partition-explorer_locatehandtools.png" alt="Locating the HandTools partition" style="max-width:100%;"></a></p>
+<p><em>Locating the HandTools partition</em></p>
+</li>
+<li>
+<p>In the <strong>Nodes</strong> section of the treeview on the left, click the node whose name matches the one identified in the previous step.</p>
+<p><a href="Images/partition-explorer_selectprimaryreplicanode.png" target="_blank"><img src="Images/partition-explorer_selectprimaryreplicanode.png" alt="Selecting the primary replica node" style="max-width:100%;"></a></p>
+<p><em>Selecting the primary replica node</em></p>
+</li>
+<li>
+<p>Click <strong>Actions</strong> in the upper-right corner of the page and select <strong>Deactivate (restart)</strong> from the ensuing menu.</p>
+<p><a href="Images/partition-explorer_deactivating.png" target="_blank"><img src="Images/partition-explorer_deactivating.png" alt="Deactivating the primary replica node" style="max-width:100%;"></a></p>
+<p><em>Deactivating the primary replica node</em></p>
+</li>
+<li>
+<p>In the "Confirm Node Deactivation" dialog, type the node name into the text box click the <strong>Deactivate (restart)</strong> button to confirm that you wish to deactivate the node.</p>
+<p><a href="Images/partition-explorer_confirmdeactivate.png" target="_blank"><img src="Images/partition-explorer_confirmdeactivate.png" alt="Confirming deactivation" style="max-width:100%;"></a></p>
+<p><em>Confirming deactivation</em></p>
+<p>Deactivation will take a couple minutes, during which Service Fabric will detect the non-functional node and rebalance the partitions and replicas across the remaining partitions.</p>
+</li>
+<li>
+<p>When Service Fabric Explorer reports that it has detected problems with the cluster, click the partition again. Confirm that the primary replica has been moved to another node.</p>
+<p><a href="Images/partition-explorer_afterdeactivation.png" target="_blank"><img src="Images/partition-explorer_afterdeactivation.png" alt="The rebalanced partition" style="max-width:100%;"></a></p>
+<p><em>The rebalanced partition</em></p>
+</li>
+<li>
+<p>Switch to the browser window in which the service is displayed. Select <strong>HandTools</strong> from the drop-down list and click <strong>Select</strong>. This will transmit a request from the inventory service to the inventory-repository service using a new URL for the partition.</p>
+<p><a href="Images/partition-browse_afternodefailure.png" target="_blank"><img src="Images/partition-browse_afternodefailure.png" alt="Displaying HandTool items" style="max-width:100%;"></a></p>
+<p><em>Displaying HandTool items</em></p>
+</li>
+<li>
+<p>Return to Service Fabric Explorer and click the node that you deactivated in Step 10. Then click <strong>Actions</strong> and select <strong>Activate</strong> from the menu. Once more, Service Fabric will notice a change to the nodes that it is managing, and will rebalance the partition replicas to take advantage of the newly available node.</p>
+</li>
+<li>
+<p>Confirm that after a few seconds, the warnings and errors in Service Fabric Explorer disappear and reflect the now-stable status of the cluster.</p>
+</li>
+</ol>
+<p>Finish up by using Visual Studio's <strong>Stop Debugging</strong> command to shut down the application for the final time.</p>
+<p><a name="Summary"></a></p>
+<h2>Summary</h2>
+<p>The application you built was fairly simple. It included an app to provide a Web front-end and a service for storing inventory. A more complete microservices implementation might include several such services, each performing a critical task for the overall application, and each communicating with the others and leveraging Service Fabric to resolve locations and addresses. In some cases, individual services might be assigned to specific subsets of the cluster that Service Fabric is managing, allowing different services to scale independently — a hallmark of a true microservices implementation.</p>
+<hr>
+<p>Copyright 2017 Microsoft Corporation. All rights reserved. Except where otherwise noted, these materials are licensed under the terms of the MIT License. You may use them according to the license as is most appropriate for your project. The terms of this license can be found at <a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a>.</p>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
