@@ -948,11 +948,11 @@ Create a new Service Fabric Cluster
 
 1.  Click on the **+NEW** link.
 
-<img src="./images/image16.png" width="187" height="31" />
+<img src="./Images/image16.png" width="187" height="31" />
 
 1.  In the search box, search for “Service Fabric Cluster” and click on the Service Fabric Cluster link in the results
 
-    <img src="./images/image17.png" width="445" height="168" />
+    <img src="./Images/image17.png" width="445" height="168" />
 
 2.  Click on the “Create” button
 
