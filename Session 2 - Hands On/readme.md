@@ -948,11 +948,11 @@ Create a new Service Fabric Cluster
 
 1.  Click on the **+NEW** link.
 
-<img src="./images/image16.png" width="187" height="31" />
+<img src="./Images/image16.png" width="187" height="31" />
 
 1.  In the search box, search for “Service Fabric Cluster” and click on the Service Fabric Cluster link in the results
 
-    <img src="./images/image17.png" width="445" height="168" />
+    <img src="./Images/image17.png" width="445" height="168" />
 
 2.  Click on the “Create” button
 
@@ -970,7 +970,7 @@ Create a new Service Fabric Cluster
 
     6.  Location: Choose the closest Azure region to you.
 
-> <img src="./images/new-sf-cluster-basic.png" width="390" height="864" />
+> <img src="./Images/new-sf-cluster-basic.png" width="390" height="864" />
 
 1.  Click **OK** to move to the next step.
 
@@ -988,15 +988,15 @@ Create a new Service Fabric Cluster
 
         4.  Leave every other settings as is and click OK
 
-            <img src="./images/sfcluster-nodetype.png" width="330" height="739" />
+            <img src="./Images/sfcluster-nodetype.png" width="330" height="739" />
 
 3.  In the “Cluster Configuration tab”, leave other settings as is as shown below and click OK
 
-    <img src="./images/sfcluster-configuration.png" width="336" height="685" />
+    <img src="./Images/sfcluster-configuration.png" width="336" height="685" />
 
 4.  In the Security tab change the security mode to “Unsecure” and click OK
     
-    <img src="./images/sfcluster-security.png" width="540" height="440" />
+    <img src="./Images/sfcluster-security.png" width="540" height="440" />
 
 5.  Under “Summary” click “Create”, This will submit a deployment of the cluster
 
@@ -1008,7 +1008,7 @@ Create a new Service Fabric Cluster
 
 1.  In Visual studio, right click on the “ServiceFabricLab” project and click on “Publish”. In the Target profile dropdown, select Cloud.xml. Select the appropriate Subscription account. Connection endpoint dropdown should be populated with the cluster we created in the previous step. Select the endpoint of the cluster in Azure. In the application parameter file dropdown, select Cloud.xml. Uncheck the “Upgrade the Application” check box if checked and if it is the first time you are deploying this application to the Azure cluster. During an upgrade, you will select this option to upgrade to a new version. Click on “Publish”. This will publish the “Invnetory” Application to the Service Fabric Cluster in Azure.
 
-    <img src="./images/image22.png" width="624" height="421" />
+    <img src="./Images/image22.png" width="624" height="421" />
 
 2.  Open the remote cluster in the service fabric explorer. For this, navigate to following explorer URL (Alternatively you can click on the explorer link in the service fabric cluster in Azure portal. To get to the cluster, select the resource group, select the service fabric cluster from the list of resources)
 
