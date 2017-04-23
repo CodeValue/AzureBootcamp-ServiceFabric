@@ -1,0 +1,70 @@
+﻿@model InventoryService.Controllers.ItemListViewModel
+
+@{
+    ViewData["Title"] = "Inventory List";
+}
+
+<div class="row" style="padding-bottom: 20px; padding-top: 20px;">
+    <div class="col-sm-12">
+        <form method="get" class="form-inline">
+            <div class="form-group">
+                <label asp-for="SelectedItemType"></label>
+                <select asp-for="SelectedItemType"
+                        asp-items="@(new SelectList(Enum.GetNames(typeof(InventoryCommon.InventoryItemType))))"
+                        class="form-control">
+                    <option>Choose an item type</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Select</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered table-responsive table-hover">
+                <thead>
+                <tr>
+                    <th><span>Item Type</span></th>
+                    <th><span>Name</span></th>
+                    <th><span>Count</span></th>
+                    <th><span>Add/Remove</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var inventoryItem in Model.InventoryItems)
+                {
+                    <tr>
+                        <td><span>@inventoryItem.ItemType</span></td>
+                        <td><span>@inventoryItem.Name</span></td>
+                        <td><span>@inventoryItem.InventoryCount</span></td>
+                        <td>
+                            <a asp-action="AddInventory"
+                               asp-route-itemId="@inventoryItem.ItemId"
+                               asp-route-selectedItemType="@inventoryItem.ItemType">
+                                <span>Increase</span>
+                            </a>
+                            &nbsp;|&nbsp;
+                            <a asp-action="RemoveInventory"
+                               asp-route-itemId="@inventoryItem.ItemId"
+                               asp-route-selectedItemType="@inventoryItem.ItemType">
+                                <span>Decrease</span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a asp-action="AddNewInventoryItem" asp-route-itemType="@Model.SelectedItemType"
+           class="btn btn-primary @(Model.SelectedItemType == null ? "disabled" : "")">
+            Add New Product
+        </a>
+    </div>
+</div>

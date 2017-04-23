@@ -1,0 +1,28 @@
+﻿@model InventoryService.Controllers.InventoryQuantityViewModel
+
+@{
+    ViewData["Title"] = Model.IsAdd ? "Add Inventory" : "Remove Inventory";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <form asp-action=@(Model.IsAdd ? "AddInventory" : "RemoveInventory") method="post">
+            <input asp-for="ItemId" type="hidden" />
+            <input asp-for="ItemType" type="hidden" />
+            <input asp-for="IsAdd" type="hidden" />
+
+            <div class="form-group">
+                <label>Item:</label>
+                <input asp-for="Display" class="form-control" placeholder="Name" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity"></label>
+                <input asp-for="Quantity" type="number" class="form-control" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">@(Model.IsAdd ? "Add Inventory" : "Remove Inventory")</button>
+                <a asp-action="index" class="btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

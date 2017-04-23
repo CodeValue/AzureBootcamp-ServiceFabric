@@ -1,0 +1,28 @@
+﻿@model InventoryCommon.InventoryItem
+
+@{
+    ViewData["Title"] = "Create Inventory Item";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <form asp-action="AddNewInventoryItem" method="post">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" placeholder="Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemType"></label>
+                <select asp-for="ItemType"
+                        asp-items="@(new SelectList(Enum.GetNames(typeof(InventoryCommon.InventoryItemType))))"
+                        class="form-control">
+                    <option>Choose an item type</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Add Inventory Item</button>
+                <a asp-action="index" asp-route-selectedItemType="@(Model.ItemType)" class="btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
